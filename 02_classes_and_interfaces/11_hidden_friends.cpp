@@ -24,10 +24,15 @@ class BoundsHidden {
   private:
 	int min, max;
 
-	friend std::ostream& operator<<(std::ostream& os, const BoundsHidden& b) {
+	friend std::ostream& operator<<(std::ostream& os, const BoundsHidden& b) //; 
+    {
 		return os << "[" << b.min << "," << b.max << "]";
 	}
 };
+
+// std::ostream& operator<<(std::ostream& os, const BoundsHidden& b) {
+//         return os << "[" << b.min << "," << b.max << "]";
+// }
 
 class Foo {
 };
@@ -39,6 +44,6 @@ int main() {
 		BoundsHidden bh{2,6};
 		std::cout << bh << std::endl;
 
-        //Foo f;
-        //std::cout << f << std::endl;
+        // Foo f;
+        // std::cout << f << std::endl;
 }

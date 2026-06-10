@@ -57,6 +57,6 @@ void standaloneOps() {
 }
 
 int main() {
-	bla::basicOps();
-	//standaloneOps();
+	// bla::basicOps();
+	standaloneOps();
 }

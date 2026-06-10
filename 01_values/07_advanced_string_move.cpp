@@ -12,12 +12,14 @@ struct string
 	char* data;
 
 	string(const char* p) {
+		std::cout << "Creating string" << std::endl;
 		size_t size = strlen(p) + 1;
 		data = new char[size];
 		memcpy(data, p, size);
 	}
 
 	~string() {
+		std::cout << "Destroying string" << std::endl;
 		if(data != nullptr) {
 			delete[] data;
 		}
